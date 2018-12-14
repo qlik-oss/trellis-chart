@@ -2,6 +2,9 @@
 <hr>
 <br> v1.0. - Tested with Qlik Sense 2.2.3.
 <br>
+
+[![CircleCI](https://circleci.com/gh/qlik-oss/trellis-chart.svg?style=svg)](https://circleci.com/gh/qlik-oss/trellis-chart)
+
 <h3>Dimensions and Measures </h3>
 
 Required at least two dimensions and one measure.
