@@ -13,6 +13,7 @@ export default {
       paint($element, layout);
     } catch (exception) {
       console.error(exception); // eslint-disable-line no-console
+      throw(exception);
     }
   }
 };
