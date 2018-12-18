@@ -1,4 +1,4 @@
-import initProps from './initialProperties';
+import initProps from './initialproperties';
 import props from './properties';
 import paint from './paint';
 
