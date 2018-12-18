@@ -1,6 +1,6 @@
 import $ from 'jquery';
-import d3 from './lib/d3.v3.min';
-import dimple from './lib/dimple.v2.2.0.min';
+import d3 from 'd3';
+import dimple from 'dimple';
 import { getMax, isNumber, getNearestXth, getScaleAndPrecision } from './utilities';
 
 var palette = [
