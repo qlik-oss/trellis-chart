@@ -2,15 +2,15 @@
 	"name": "Trellis Chart",
 	"description": "Trellis chart based on D3.js and dimble.js",
 	"type": "visualization",
-	"version": "1.0.0",
+	"version": "X.Y.Z",
 	"icon": "extension",
-	"preview" : "trellis.png",
-	"author": "Michael Laenen, CTO at Agilos.com",
+	"preview" : "qlik-trellis-chart.png",
+	"author": "Michael Laenen <m.laenen@contactoffice.net>",
 	"homepage": "",
 	"keywords": "qlik-sense, visualization, trellis",
-	"license": "",
+	"license": "MIT",
 	"repository": "",
 	"dependencies": {
-		"qlik-sense": ">=2.0.x"
+		"qlik-sense": ">=5.5.x"
 	}
 }
