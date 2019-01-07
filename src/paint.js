@@ -297,13 +297,13 @@ function paint ($element, layout, self) {
     $("#" + id).empty();
   }
   else {
-    $element.append($('<div />').attr("id", id).width(width).height(height)
-      .toggleClass('in-edit-mode', self._inEditState));
+    $element.append($('<div />').attr("id", id).width(width).height(height));
   }
 
-  // Create SVG container  - this is analog to d3.select().append("svg")...
-  var svg = dimple.newSvg("#" + id, width, height);
-
+  var svg = d3.select("#" + id).append("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .classed("in-edit-mode", self._inEditState);
   drawChart(svg, data, options, width, height);
 }
 
