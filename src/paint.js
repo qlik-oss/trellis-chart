@@ -2,7 +2,7 @@ import $ from 'jquery';
 import d3 from 'd3';
 import dimple from 'dimple';
 import { getMax, isNumber, getNearestXth, getScaleAndPrecision } from './utilities';
-
+import './styles.less';
 var palette = [
   "#b0afae", "#7b7a78", "#545352", "#4477aa", "#7db8da", "#b6d7ea",
   "#46c646", "#f93f17", "#ffcf02", "#276e27","#ffffff", "#000000"
@@ -257,7 +257,7 @@ function drawChart(svg, data, options, w, h) {
   });
 }
 
-function paint ($element, layout) {
+function paint ($element, layout, self) {
   var qMatrix = layout.qHyperCube.qDataPages[0].qMatrix;
 
   // Create a new array for our extension with a row for each row in the qMatrix
@@ -298,7 +298,8 @@ function paint ($element, layout) {
     $("#" + id).empty();
   }
   else {
-    $element.append($('<div />').attr("id", id).width(width).height(height));
+    $element.append($('<div />').attr("id", id).width(width).height(height)
+      .toggleClass('in-edit-mode', self._inEditState));
   }
 
   // Create SVG container  - this is analog to d3.select().append("svg")...

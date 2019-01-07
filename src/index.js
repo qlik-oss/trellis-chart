@@ -9,8 +9,9 @@ export default {
     canTakeSnapshot: true
   },
   paint: function ( $element, layout ) {
+    let self = this;
     try {
-      paint($element, layout);
+      paint($element, layout, self);
     } catch (exception) {
       console.error(exception); // eslint-disable-line no-console
       throw(exception);
