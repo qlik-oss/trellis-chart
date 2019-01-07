@@ -1,7 +1,7 @@
 import initProps from './initialproperties';
 import props from './properties';
 import paint from './paint';
-
+import "./styles.less";
 export default {
   definition: props,
   initialProperties: initProps,
