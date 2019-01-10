@@ -1,7 +1,7 @@
 import initProps from './initialproperties';
 import props from './properties';
 import paint from './paint';
-
+import "./styles.less";
 export default {
   definition: props,
   initialProperties: initProps,
@@ -9,8 +9,9 @@ export default {
     canTakeSnapshot: true
   },
   paint: function ( $element, layout ) {
+    let self = this;
     try {
-      paint($element, layout);
+      paint($element, layout, self);
     } catch (exception) {
       console.error(exception); // eslint-disable-line no-console
       throw(exception);
